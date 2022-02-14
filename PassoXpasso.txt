@@ -1,0 +1,84 @@
+
+ il video youtube:  https://www.youtube.com/watch?v=c1xTDSIXit8&feature=youtu.be
+
+
+ Font links index   
+ 
+1)    npm i react-router-dom@6.0.0-beta.0     => Menu 
+
+2)    npm i --save styled-components
+
+3)    npm add @material-ui/core   @material-ui/icons 
+     //  sito :    https://mui.com/components/material-icons/
+
+4) crea il file Menu o NavMenu.js   
+ 
+import React from 'react';
+
+import { Badge } from '@material-ui/core';
+
+import { Search ,ShoppingCartOutlined   } from '@material-ui/icons';
+
+import styled from 'styled-components';
+
+
+    const Container = styled.div` 
+        font-size: 1.5em;
+        background-color: red;
+        color: palevioletred;
+        `;
+
+
+
+const NavMenu = () => {
+  return (
+    <div >
+        
+        
+        <Container>
+            <Wrapper >   
+                
+                <Left>       
+                    <Lenguage> EN </Lenguage>
+
+                    <SearchContainer> 
+                        <Input />
+                        <Search />
+                    </SearchContainer>
+                </Left>
+
+                <Center> <Logo > LAMA. </Logo>  </Center>
+
+                <Rigth > 
+                     <MenuItems> login </MenuItems>
+                     <MenuItems>  Register  </MenuItems>
+                     <MenuItems> 
+                        <Badge badgeContent={4} color="primary">
+                          <ShoppingCartOutlined />
+                        </Badge>
+
+                  
+                      </MenuItems>
+                
+                 </Rigth>
+
+            </Wrapper>
+        
+        </Container>
+
+        
+        </div>
+  )
+}
+
+export default NavMenu
+
+
+
+
+4)   crea folder 'components' ed il file Annuncio.js ed 
+     Slider.js 
+
+
+
+5)  Crea un file Catejories.js  ed CategoryItem.js   in Folder components 

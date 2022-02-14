@@ -1,0 +1,81 @@
+
+
+
+ --   Per creare una @media only screen  responsive o mettere  nel file direttamente 
+
+
+  
+1) const Container = styled.div`
+ 
+  font-size: 1.5em;
+  background-color: red;
+  color: palevioletred;
+  
+  @media only screen and (max-width: 600px ) {
+        display:  flex;
+        flex-direction:  column ;
+  }
+
+
+`;
+
+
+
+2)  oppure  creare un file " responsive.js"
+   
+
+
+import {css}  from "styled-components ";
+
+
+   export  const mobile = (props) => {
+      return css`
+
+        @media only screen and (max-width: 400px ) {
+      
+           ${props}
+      }
+
+    `;
+
+
+   }
+
+
+
+
+   
+   export  const tablet = (props) => {
+      return css`
+
+        @media only screen and (max-width: 680px ) {
+      
+           ${props}
+      }
+
+    `;
+
+
+   }
+
+
+
+
+   3)  nel file in cui si vuole utilizzarlo 
+  
+    import { mobile  , tablet} from "../responsive";
+      oppure
+     import { mobile } from "../responsive";  
+     import { tablet } from "../responsive";  
+
+
+     
+const Container = styled.div`
+
+  font-size: 1.5em;
+  background-color: red;
+  color: palevioletred;
+
+   ${mobile({ backgroundColor: "blue" })}
+
+`;
