@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     padding : 10px ;
 
   /* ${ tablet({ color: "yellow"})} */
-  /* ${ mobile({  border: "1px solid yellow"     })} */
+  ${ mobile({  marginLeft: "-20px"     })}
   ${ mobile({  justifyContent: "flex-start !importatnt"  })}
 
 `;
@@ -85,7 +85,7 @@ const Center = styled.div`
 const Logo = styled.span`
     font-size: 1em;
 
-    ${ mobile({ fontSize: ".8rem"})}
+    ${ mobile({ fontSize: ".7rem"})}
 `;
 
 const Rigth = styled.div`
@@ -102,7 +102,7 @@ const MenuItems = styled.div`
     font-size: 1em;
     cursor: pointer;
 
-    ${ mobile({ fontSize: ".8rem"})}
+    ${ mobile({ fontSize: ".6rem"})}
 `;
 
 

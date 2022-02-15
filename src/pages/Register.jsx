@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -24,6 +25,8 @@ const Wrapper = styled.div`
   border: none;
   box-shadow:  1px 1px 1px 2px  rgba(255, 255, 255, 0.35) ;
   background-color: rgba(255, 255, 255, 0.3) ;
+
+   ${mobile({  width: "80%" })}
 `;
 
 const Title = styled.h2`
@@ -35,6 +38,7 @@ const Title = styled.h2`
 const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
+  ${mobile({ flexDirection: "column"  })}
 `;
 
 const Input = styled.input`

@@ -9,7 +9,7 @@ import NavMenu from "../Menu/NavMenu";
 import Annuncio from "../components/Annuncio";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 
 
@@ -83,7 +83,7 @@ const Summary = styled.div`
   border-radius: 10px;
   height: 80vh;
   border: 0.5px solid lightgray;
-  
+  ${tablet({   marginTop: "130px"   })}
 `;
 
 const SummaryTitle = styled.h2`
@@ -153,14 +153,14 @@ const Details = styled.div`
 const Image = styled.img`
   width: 30%;
   object-fit: cover;
-  ${mobile({  width:"100%" })}
+  ${mobile({  width:"50%" })}
    
 `;
 
 const ProductName = styled.h3`
   font-size: 1.3rem;
   /* border: 1px dashed blue; */
-  
+  ${mobile({  fontSize:".9rem" })}
 `;
 
 
@@ -168,6 +168,8 @@ const ProductId = styled.div`
 
 ${mobile({   margin: "20px 0 0 "    })}
 `;
+
+
 const ProductColor = styled.div`
   width: 20px;
   height: 20px;
@@ -177,6 +179,7 @@ const ProductColor = styled.div`
 `;
 const ProductSize = styled.div`
   font-size: 1.5rem;
+  ${mobile({  fontSize:"1rem" })}
 `;
 
 const PriceDeleit = styled.div`
@@ -186,6 +189,7 @@ const PriceDeleit = styled.div`
   flex-direction: column;
   gap: 20px;
   ${mobile({   margin: "20px 0 0 " })}
+  
     /* border: 2px solid blue; */
 `;
 
@@ -193,7 +197,7 @@ const ProductAmountContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   ${mobile({ JustifyContent: "flex-start"})}
 `;
 
